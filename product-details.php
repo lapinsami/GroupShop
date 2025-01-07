@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Christofer-Style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="stylesheet" href="css/Christofer-Style.css"> <!--Denna skall ändras till style.css efter merge -->
     <title>Document</title>
 </head>
 
@@ -23,7 +23,7 @@
                     Login
                 </button>
                 <a href="./cart.html">
-                    <img class="cart-click" src="../pictures/Cart.jpg" alt="Click me!" width="10%">
+                    <img class="cart-click" src="img/Cart.jpg" alt="Click me!" width="10%">
                 </a>
             </section>
         </section>
