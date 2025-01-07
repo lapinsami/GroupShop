@@ -1,19 +1,21 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0;       
 }
 
-body {
+body, html {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
 }
 
 header {
+    justify-content: space-between;    
+
     position: sticky;
     z-index: 9100;
-    top: 0px;
+    top: 0;
     background-color: white;
 }
 
@@ -86,6 +88,7 @@ a:hover {
 
 main {    
     padding: 1rem;
+    flex: 1;
 }
 
 footer {
