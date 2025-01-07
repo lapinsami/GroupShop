@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
 /* Dividing the header into 3 sections */
@@ -16,28 +17,31 @@ section {
     display: flex;
     text-align: center;
     color: green;
-    font-size: larger;
+    font-size: 2rem;
     padding: 0.7rem;
 }
 
 /* Box for login/cart */
 .Login-Cart {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;    
-    text-align: center;
+    /* flex-direction: row; */
+    justify-content: right;        
     align-items: center;
 }
 
 /* Login button */
 .login-button {
     padding: 0.5rem;
-    width: 100%;
+    width: 5rem;
     height: 2rem;
-    
+    justify-content: right;
     align-items: center;    
 }
 
+/* Button for Cart */
+.cart-click {
+    width: 2rem;
+}
 
 nav {
     background-color: green;
