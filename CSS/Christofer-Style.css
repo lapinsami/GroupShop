@@ -52,11 +52,6 @@ section {
     /* align-self: flex-end; */
 }
 
-/* Box for login/cart */
-section:nth-child(3) {
-    /* background-color: black; */
-}
-
 /* Login button */
 .login-button {
     padding: 0.5rem;
