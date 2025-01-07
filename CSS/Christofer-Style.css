@@ -10,6 +10,13 @@ body {
     justify-content: space-between;
 }
 
+header {
+    position: sticky;
+    z-index: 9100;
+    top: 0px;
+    background-color: white;
+}
+
 /* Dividing the header into 3 sections */
 section {
     /* box-sizing: auto; */
@@ -81,8 +88,20 @@ a:hover {
     color: lightgray;
 }
 
+main {
+    
+    padding: 1rem;
+}
+
 footer {
     background-color: green;
     padding: 2%;
     color: white;
+    bottom: 100%;
 }
+
+textarea {
+    resize: none;
+}
+
+
