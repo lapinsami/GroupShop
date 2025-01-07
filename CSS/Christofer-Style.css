@@ -114,7 +114,9 @@ footer {
 }
 
 textarea {
-    resize: none;
+    resize: none;    
 }
 
-
+.username, .password, .button-login {
+    font-size: 1.5rem;    
+}
