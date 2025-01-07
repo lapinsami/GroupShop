@@ -3,12 +3,42 @@
     padding: 0;
 }
 
+/* Dividing the header into 3 sections */
+section {
+    /* box-sizing: auto; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Name for the company in the header */
 .HeaderName {
     text-align: center;
     color: green;
     font-size: larger;
     padding: 0.7rem;
 }
+
+/* Box for login/cart */
+.Login-Cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;    
+    text-align: center;
+    align-items: center;
+}
+
+/* Login button */
+.login {
+    padding: 0.5rem;
+    width: 100%;
+    height: 2rem;
+    
+    align-items: center;
+
+    
+}
+
 
 nav {
     background-color: green;
