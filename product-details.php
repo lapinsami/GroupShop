@@ -37,7 +37,10 @@
 
     <main>
         <?php
-            $product = $_GET["product"];
+            if(isset($_GET["product"]))
+                $product = $_GET["product"];
+            else
+                $product = "";
 
             switch ($product) {
                 case "spork":
