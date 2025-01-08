@@ -100,7 +100,6 @@ main {
     }
 }
 
-
 footer {
     position: sticky; /* Sätter fast footern i botten */
     z-index: 100;
