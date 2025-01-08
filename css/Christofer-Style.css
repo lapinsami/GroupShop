@@ -64,6 +64,11 @@ section {
     width: 2rem;
 }
 
+main > .searchbar {
+    justify-content: center;
+    align-items: center;
+}
+
 nav {
     background-color: green;
     padding: 0.7rem;
