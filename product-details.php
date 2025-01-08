@@ -19,19 +19,23 @@
 
             <!-- Box for login and cart -->
             <section class="Login-Cart">
-                <button onclick="location.href='./login.html'" class="login-button">
+                <a href="profile.html">
+                    <img src="img/login.png" alt="Click to get to Profile" class="profile-button" width="10%">
+                </a>
+                <button onclick="location.href='login.html'" class="login-button">
                     Login
                 </button>
-                <a href="./cart.html">
+                <a href="cart.html">
                     <img class="cart-click" src="img/Cart.jpg" alt="Click me!" width="10%">
                 </a>
             </section>
         </section>
         <nav>
             <a href="./index.html">Home</a>
-            <a href="./products.html">Products</a>
-            <a href="./contact.html">Contact</a>
-            <a href="./faq.html">FAQ</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html">About</a>
         </nav>
     </header>
 
