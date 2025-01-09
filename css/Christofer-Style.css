@@ -129,7 +129,51 @@ textarea {
 /* Yta där jag/christofer skriver för profile 
 ------------------------------------*/
 
+.profile {
+    display: flex;
+    padding: 15rem;
+    align-items: normal;
+    justify-content: flex-start; 
+    background-color: gray;
+}
 
+.profile > section {   
+    display: flex;
+
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1rem;
+    width: 100%;
+    
+    background-color: lightgray;
+    
+
+    border: 3px solid darkgray;
+    box-shadow: 10px 10px 40px black;
+}
+
+.profile > section:nth-child(1) > h1 {   
+    display: flex; 
+    align-self: center;
+    max-width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.profile > section:nth-child(1) > section {        
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.robotnic {    
+    align-self: center;
+    
+}
 
 /*------------------------------------
 Yta där jag/christofer skriver för profile  */
