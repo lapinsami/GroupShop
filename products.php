@@ -32,7 +32,7 @@
         </section>
         <nav>
             <a href="./index.html">Home</a>
-            <a href="products.html">Products</a>
+            <a href="products.php">Products</a>
             <a href="contact.html">Contact</a>
             <a href="faq.html">FAQ</a>
             <a href="about.html">About</a>
@@ -41,17 +41,21 @@
 
     <main>
 
-        <form action="/search" method="GET" class="searchbar">
+        <form action="products.php" method="GET" class="searchbar">
             <input type="search" name="query" placeholder="Search here..." required>
             <button type="submit">Search</button>
         </form>
 
+        <?php
+            $products = array("spork", "spoon", "knife", "fork");
+            $query = $_GET["query"];
 
-        <a style="color: black;" href="product-details.php?product=spork">spork</a>
-        <a style="color: black;" href="product-details.php?product=fork">fork</a>
-        <a style="color: black;" href="product-details.php?product=spoon">spoon</a>
-        <a style="color: black;" href="product-details.php?product=knife">knife</a>
-        <a style="color: black;" href="product-details.php?product=asdasdasdasd">asdasdasdasd</a>
+            foreach($products as $product){
+                if(str_contains($product, $query)){
+                    echo "<a style='color: black;' href='product-details.php?product={$product}'>{$product}</a>";
+                }
+            }
+        ?>
 
     </main>
 
