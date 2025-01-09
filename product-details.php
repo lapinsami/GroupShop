@@ -40,7 +40,29 @@
     </header>
 
     <main>
-        <p>Product details</p>
+        <?php
+        if(isset($_GET["product"]))
+            $product = $_GET["product"];
+        else
+            $product = "";
+        switch ($product) {
+            case "spork":
+                echo "<h1>Spork</h1>";
+                break;
+            case "fork":
+                echo "<h1>Fork</h1>";
+                break;
+            case "spoon":
+                echo "<h1>Spoon</h1>";
+                break;
+            case "knife":
+                echo "<h1>Knife</h1>";
+                break;
+            default:
+                echo "<h1>Unknown product</h1>";
+                break;
+        }
+        ?>
     </main>
 
     <footer>
