@@ -43,14 +43,13 @@ section {
     padding: 0.7rem;
 }
 
-/* Box for login/cart */
+/* Box for login/cart/profile */
 .Login-Cart {
     display: flex;
     width: 100%;
     /* flex-direction: row; */
     justify-content: right;        
     align-items: center;
-    
     /* align-self: flex-end; */
 }
 
@@ -58,14 +57,17 @@ section {
 .login-button {
     padding: 0.5rem;
     width: 5rem;
-    height: 2rem;
-    justify-content: right;
-    align-items: center;    
 }
 
 /* Button for Cart */
 .cart-click {
     width: 2rem;
+}
+
+main > .searchbar {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
 }
 
 nav {
@@ -100,6 +102,13 @@ main {
     }
 }
 
+<<<<<<< HEAD:CSS/Christofer-Style.css
+=======
+.profile-button {    
+    width: 2rem;
+}
+
+>>>>>>> main:css/Christofer-Style.css
 footer {
     position: sticky; /* Sätter fast footern i botten */
     z-index: 100;
