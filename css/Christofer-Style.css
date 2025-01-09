@@ -1,17 +1,18 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;       
+    margin: 0;
 }
 
-body, html {
+body,
+html {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 header {
-    justify-content: space-between;    
+    justify-content: space-between;
 
     position: sticky;
     z-index: 9100;
@@ -48,7 +49,7 @@ section {
     display: flex;
     width: 100%;
     /* flex-direction: row; */
-    justify-content: right;        
+    justify-content: right;
     align-items: center;
     padding: 0.1rem;
     /* align-self: flex-end; */
@@ -65,7 +66,7 @@ section {
     width: 2rem;
 }
 
-main > .searchbar {
+main>.searchbar {
     display: flex;
     justify-content: center;
     padding: 0.5rem;
@@ -74,13 +75,13 @@ main > .searchbar {
 nav {
     background-color: green;
     padding: 0.7rem;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 a {
     text-decoration: none;
     color: whitesmoke;
-    padding: 1rem;
+    padding: 0rem 1rem;
 }
 
 /* turns the text lightgrey when hovered */
@@ -88,7 +89,7 @@ a:hover {
     color: lightgray;
 }
 
-main {    
+main {
     padding: 1rem;
     flex: 1;
     /* display: flex auto; */
@@ -97,82 +98,134 @@ main {
 }
 
 @media (max-width: 600px) {
-   
-    main > img {
+
+    main>img {
         width: 400px;
     }
 }
 
-.profile-button {    
+.profile-button {
     width: 2rem;
 }
 
 footer {
-    position: sticky; /* Sätter fast footern i botten */
+    position: sticky;
+    /* Sätter fast footern i botten */
     z-index: 100;
-    bottom: 0;    
+    bottom: 0;
     flex-direction: row;
     background-color: green;
     padding: 1rem;
     color: white;
-    text-align: center; /* Centrerar texten i footern */
+    text-align: center;
+    /* Centrerar texten i footern */
 }
 
 textarea {
-    resize: none;    
+    resize: none;
 }
 
-.username, .password, .button-login {
-    font-size: 1.5rem;    
+.username,
+.password,
+.button-login {
+    font-size: 1.5rem;
 }
 
 /* Yta där jag/christofer skriver för profile 
 ------------------------------------*/
 
-.profile {
-    display: flex;
-    padding: 15rem;
-    align-items: normal;
-    justify-content: flex-start; 
-    background-color: gray;
+.body-profile {
+background-color: grey;
 }
 
-.profile > section {   
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    background-color: gray;
+   
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.profile>section {
     display: flex;
 
-    align-items: flex-start;
+   font-size: 1.3rem;
+   
+   
+    align-items: center;
     flex-direction: column;
     justify-content: center;
 
     padding: 1rem;
-    width: 100%;
-    
+
+    flex-wrap: wrap;
+
     background-color: lightgray;
-    
+    flex: 1;
 
     border: 3px solid darkgray;
     box-shadow: 10px 10px 40px black;
 }
 
-.profile > section:nth-child(1) > h1 {   
-    display: flex; 
-    align-self: center;
-    max-width: 100%;
-    white-space: nowrap; 
-    overflow: hidden; 
+@media (max-width: 600px) {
+    .profile>section {
+        display: flex;
+        flex: 1;
+        min-width: 200px;       
+    }
 }
-
-.profile > section:nth-child(1) > section {        
-    display: flex;
-    gap: 10px;
-    max-width: 100%;
-    white-space: nowrap; 
-    overflow: hidden; 
-}
-
-.robotnic {    
-    align-self: center;
     
+
+.profile>section>article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex-wrap: nowrap;
+
+    max-width: 100%;
+}
+
+.profile>section>h1 {
+    display: flex;
+    align-self: center;
+    max-width: 100%;    
+}
+
+.profile>section>article>section {
+    display: flex;
+
+    gap: 10px;
+    max-width: 100%;   
+}
+
+.profile>section>article>section:nth-child(2) {
+    gap: 0rem;
+}
+
+.robotnic {
+    align-self: center;
+    max-width: 100%;
+   
+    margin-top: 4rem;
+}
+
+.mail {
+    font-style: italic;
+    font-weight: lighter;
+    color: black;
+    text-decoration: underline;
+}
+
+.mail:hover {
+    color: black;
 }
 
 /*------------------------------------
