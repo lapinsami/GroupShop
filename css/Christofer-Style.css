@@ -102,13 +102,10 @@ main {
     }
 }
 
-<<<<<<< HEAD:CSS/Christofer-Style.css
-=======
 .profile-button {    
     width: 2rem;
 }
 
->>>>>>> main:css/Christofer-Style.css
 footer {
     position: sticky; /* Sätter fast footern i botten */
     z-index: 100;
