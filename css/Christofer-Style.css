@@ -48,11 +48,9 @@ section {
 .Login-Cart {
     display: flex;
     width: 100%;
-    /* flex-direction: row; */
     justify-content: right;
     align-items: center;
     padding: 0.1rem;
-    /* align-self: flex-end; */
 }
 
 /* Login button */
@@ -177,7 +175,7 @@ background-color: grey;
     flex: 1;
 
     border: 3px solid darkgray;
-    box-shadow: 10px 10px 40px black;
+    box-shadow: 0px 0px 40px black;
 }
 
 @media (max-width: 600px) {
@@ -212,8 +210,8 @@ background-color: grey;
     max-width: 100%;   
 }
 
-.profile>section>article>section:nth-child(2) {
-    gap: 0rem;
+.profile>section>article>section {
+    gap: 1rem;    
 }
 
 .robotnic {
