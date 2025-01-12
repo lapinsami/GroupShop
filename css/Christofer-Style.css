@@ -291,3 +291,54 @@ h2 {
 .product-section img {
     margin-bottom: 15px;
 }
+
+/* for FAQ */
+
+/* container div */
+.faq-container {
+    width: 75%;
+    margin: auto;
+}
+
+/* question button */
+.faq-question {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+
+/* change color when question active */
+.active {
+    background-color: darkgreen;
+}
+
+/* change color when question hovered */
+.faq-question:hover {
+    color: black;
+    background-color: lightgreen;
+}
+
+.faq-question:after {
+    content: '\02795';
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+}
+
+/* answer box */
+.faq-answer {
+    padding: 16px 32px;
+    display: none;
+    overflow: hidden;
+    background-color: lightgray;
+}

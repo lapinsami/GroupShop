@@ -40,9 +40,46 @@
     </header>
 
     <main>
+        <div class="faq-container">
+            <h1>Frequently asked questions</h1>
+            <br>
+            <button type="button" class="faq-question">Question 1</button>
+            <div class="faq-answer">
+                <p>Answer 1</p>
+            </div>
 
-        <p>FAQ</p>
-        
+            <button type="button" class="faq-question">Question 1</button>
+            <div class="faq-answer">
+                <p>Answer 1</p>
+            </div>
+
+            <button type="button" class="faq-question">Question 1</button>
+            <div class="faq-answer">
+                <p>Answer 1</p>
+            </div>
+
+            <button type="button" class="faq-question">Question 1</button>
+            <div class="faq-answer">
+                <p>Answer 1</p>
+            </div>
+        </div>
+
+        <script>
+            let questions = document.getElementsByClassName("faq-question");
+            let i;
+
+            for (i = 0; i < questions.length; i++) {
+                questions[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let answer = this.nextElementSibling;
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                    } else {
+                        answer.style.display = "block";
+                    }
+                });
+            }
+        </script>
     </main>
 
     <footer>
