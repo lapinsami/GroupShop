@@ -159,7 +159,7 @@
                 let p = products[i];
                 if (product === p.product_name) {
                     productDescriptionToShow = `<p style="font-size: 28px; color: black;"><b>${p.description}</b></p>`;
-                    productImageUrl = `<img id="product-image" src="/img/${p.product_name}.jpg" alt="product image" width="300px">`;
+                    productImageUrl = `<img id="product-image" src="/img/${p.product_name}.jpg" alt="product image" height="300px">`;
                     productPrice = `<input type="number" id="price" value="${p.price}" readonly>`;
                     break;
                 }
