@@ -378,6 +378,12 @@ h2 {
     margin: auto;
 }
 
+@media (max-width: 800px) {
+    .cart-container {
+        width: 100%;
+    }
+}
+
 .product-in-cart {
     text-align: left;
     margin: 4px;
