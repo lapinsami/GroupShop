@@ -79,11 +79,15 @@
     </header>
 
     <main>
-        <p style="font-size: 28px; color: black;"><b>SPORK, din bästa vän i naturen!</b></p>
+        <div id="description-container">
+            <p style="font-size: 28px; color: black;"><b>SPORK, din bästa vän i naturen!</b></p>
+        </div>
 
         <section class="product-section">
             <a href="product-details.html">
-                <img src="./img/spork.jpg" alt="Spork image" width="300px">
+                <div id="product-image-container">
+                    <img id="product-image" src="./img/spork.jpg" alt="Spork image" width="300px">
+                </div>
             </a>
 
             <h2>Beställ här</h2>
@@ -102,7 +106,9 @@
 
             <div class="form-group">
                 <label for="price">Pris</label>
-                <input type="number" id="price" value="12.90" readonly>
+                <div id="price-container">
+                    <input type="number" id="price" value="12.90" readonly>
+                </div>
             </div>
 
             <div class="form-group">
@@ -139,6 +145,28 @@
                 const quantity = document.getElementById('quantity').value;
                 alert(`Added to cart:\n\nItem: ${description}\nPrice: ${price} SEK\nQuantity: ${quantity}`);
             }
+        </script>
+
+        <script src="js/products.js"></script>
+
+        <!-- set the product based on the url parameter -->
+        <script>
+            let productDescriptionToShow = "";
+            let productImageUrl = "";
+            let productPrice = 0.00;
+
+            for (let i = 0; i < products.length; i++) {
+                let p = products[i];
+                if (product === p.product_name) {
+                    productDescriptionToShow = `<p style="font-size: 28px; color: black;"><b>${p.description}</b></p>`;
+                    productImageUrl = `<img id="product-image" src="img/${p.product_name}.jpg" alt="product image" height="300px">`;
+                    productPrice = `<input type="number" id="price" value="${p.price}" readonly>`;
+                    break;
+                }
+            }
+            document.getElementById("description-container").innerHTML = productDescriptionToShow;
+            document.getElementById("product-image-container").innerHTML = productImageUrl;
+            document.getElementById("price-container").innerHTML = productPrice;
         </script>
 
     </main>

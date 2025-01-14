@@ -41,17 +41,28 @@
 
     <main>
 
-        <form action="/search" method="GET" class="searchbar">
+        <form action="/products.html" method="GET" class="searchbar">
             <input type="search" name="query" placeholder="Search here..." required>
             <button type="submit">Search</button>
         </form>
 
+        <div id="products-container">
 
-        <a style="color: black;" href="product-details.html?product=spork">spork</a>
-        <a style="color: black;" href="product-details.html?product=fork">fork</a>
-        <a style="color: black;" href="product-details.html?product=spoon">spoon</a>
-        <a style="color: black;" href="product-details.html?product=knife">knife</a>
-        <a style="color: black;" href="product-details.html?product=asdasdasdasd">asdasdasdasd</a>
+        </div>
+
+        <script src="js/products.js"></script>
+
+        <script>
+            let productsToShow = "";
+
+            for (let i = 0; i < products.length; i++) {
+                let p = products[i];
+                if (search === "" || p.product_name.includes(search)) {
+                    productsToShow += `<a style="color: black;" href="product-details.html?product=${p.product_name}">${p.product_name}</a>`;
+                }
+            }
+            document.getElementById("products-container").innerHTML = productsToShow;
+        </script>
 
     </main>
 
