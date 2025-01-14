@@ -342,3 +342,28 @@ h2 {
     overflow: hidden;
     background-color: lightgray;
 }
+
+/* for product.html */
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-box {
+    text-align: center;
+    margin: 4px;
+    padding: 2px;
+    outline: green solid 1px;
+    flex: calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    min-width: 500px;
+}
+
+@media (max-width: 800px) {
+    .product-box {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
