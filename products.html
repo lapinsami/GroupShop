@@ -41,7 +41,7 @@
 
     <main>
 
-        <form action="/products.html" method="GET" class="searchbar">
+        <form action="products.html" method="GET" class="searchbar">
             <input type="search" name="query" placeholder="Search here..." required>
             <button type="submit">Search</button>
         </form>
@@ -58,7 +58,13 @@
             for (let i = 0; i < products.length; i++) {
                 let p = products[i];
                 if (search === "" || p.product_name.includes(search)) {
-                    productsToShow += `<a style="color: black;" href="product-details.html?product=${p.product_name}">${p.product_name}</a>`;
+                    productsToShow += `<div class="product-box">`;
+                    productsToShow +=     `<h2>${p.product_name}</h2>`;
+                    productsToShow +=     `<a href="product-details.html?product=${p.product_name}">`;
+                    productsToShow +=         `<img src="img/${p.product_name}.jpg" alt="${p.product_name} image">`;
+                    productsToShow +=     `</a>`;
+                    productsToShow +=     `<p><b>${p.price}</b></p>`;
+                    productsToShow += `</div>`;
                 }
             }
             document.getElementById("products-container").innerHTML = productsToShow;
