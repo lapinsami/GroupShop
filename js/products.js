@@ -25,7 +25,7 @@ class Product {
 }
 
 let products = [];
-products.push(new Product("spork", "SPORK, din bästa vän i naturen!", 12.90, "img/spork.jpg", ["Blå", "Grön", "Rosa", "Gul"]))
+products.push(new Product("spork", "SPORK, din bästa vän i naturen!", 12.90, "img/spork-color.jpg", ["Blå", "Grön", "Rosa", "Gul"]))
 products.push(new Product("fork", "FORK (it's just a fork)", 7.90, "img/fork.jpg", ["Large", "Medium", "Small"]))
 products.push(new Product("knife", "KNIFE, for slicin'", 6.90, "img/knife.jpg", ["Sharp", "Dull", "Rusty"]))
 products.push(new Product("spoon", "SPOON. Eat soup.", 7.90, "img/spoon.jpg", ["Tea-sized", "Normal"]))
