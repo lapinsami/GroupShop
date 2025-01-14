@@ -61,7 +61,7 @@
                     productsToShow += `<div class="product-box">`;
                     productsToShow +=     `<h2>${p.product_name}</h2>`;
                     productsToShow +=     `<a href="product-details.html?product=${p.product_name}">`;
-                    productsToShow +=         `<img src="img/${p.product_name}.jpg" alt="${p.product_name} image">`;
+                    productsToShow +=         `<img src="${p.image_url}" alt="${p.product_name} image">`;
                     productsToShow +=     `</a>`;
                     productsToShow +=     `<p><b>${p.price}</b></p>`;
                     productsToShow += `</div>`;
