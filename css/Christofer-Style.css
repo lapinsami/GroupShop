@@ -437,3 +437,27 @@ h2 {
     height: 50px;
     text-align: center;
 }
+
+/* about page */
+.about-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 75%;
+    margin: auto;
+}
+
+@media (max-width: 1000px) {
+    .about-container {
+        width: 100%;
+        grid-template-columns: auto;
+    }
+}
+
+.about-image {
+    margin: 20px 50px;
+}
+
+.about-text {
+    font-size: 22px;
+    margin: 20px 50px;
+}
