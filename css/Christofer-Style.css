@@ -296,11 +296,11 @@ h2 {
 
 /* container div */
 .faq-container {
-    width: 75%;
+    width: 1200px;
     margin: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: calc(1200px + 2rem)) {
     .faq-container {
         width: 100%;
     }
@@ -312,6 +312,7 @@ h2 {
     color: white;
     cursor: pointer;
     padding: 18px;
+    margin: 0;
     width: 100%;
     border: none;
     text-align: left;
@@ -367,7 +368,7 @@ h2 {
     min-width: 500px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: calc(1200px + 2rem)) {
     .product-box {
         flex: 100%;
         max-width: 100%;
@@ -380,11 +381,11 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    width: 75%;
+    width: 1200px;
     margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: calc(1200px + 2rem)) {
     .cart-container {
         width: 100%;
     }
@@ -448,11 +449,11 @@ h2 {
 .about-container {
     display: grid;
     grid-template-columns: auto auto;
-    width: 75%;
+    width: 1200px;
     margin: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: calc(1200px + 2rem)) {
     .about-container {
         width: 100%;
         grid-template-columns: auto;
