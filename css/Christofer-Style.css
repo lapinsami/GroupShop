@@ -252,6 +252,74 @@ background-color: grey;
 /*------------------------------------
 Yta där jag/christofer skriver för profile  */
 
+/* Yta där jag/christofer skriver för contact  
+------------------------------------ */
+
+.left {
+    display: flex;
+
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+   width: 100%;
+   height: 100%;
+
+    color: white;
+    /* font-size: 2rem;     */
+    
+    padding: 0.7rem;
+
+}
+
+.right {
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0.7rem;
+
+    /* margin: 20px auto; */
+}
+
+.right > p:nth-child(2) {
+ margin-bottom: 1rem;
+}
+
+
+.right > address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 40rem;   
+    box-shadow: 0px 0px 40px black;    
+    border-style:double ridge;
+ }
+
+
+.contact {
+    display: flex;
+    box-shadow:inset 0px 0px 20px black;
+    background-color: white;
+}
+
+/*------------------------------------
+Yta där jag/christofer skriver för contact  */
+
+
 /*Saga made dis*/
 
 .form-group {
