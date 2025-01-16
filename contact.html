@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <section>
+        <section class="sectheader">
             <!-- Just to make the space evenly amongst sections -->
             <section class="empty"></section>
 
@@ -42,14 +42,37 @@
     <main class="contact">
 
         <section class="center">
+
             <section class="left">
-                <!-- <form action="asd">asd</form> -->
-                <input type="submit" class="input">
+
+                <h2>Kontakta Oss</h2>
+
+                <form action="" method="" class="form1">
+
+                    <section class="contsection">   
+
+                        <input type="name" id="name" name="name" placeholder="Name" required>
+                        
+                        <input type="email" id="email" name="email" placeholder="E-post" required>
+
+                    </section>
+
+                    <input type="phone" id="phone" name="phone" placeholder="Mobilnummer" required>
+
+                    <input type="subject" id="subject" name="subject" placeholder="Ämne" required>
+
+                    <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." required></textarea>
+
+                    <button type="submit">Skicka</button>
+                </form>
+
             </section>
+
             <section class="right">
 
                 <p>Behöver du nå oss?</p>
                 <p>Här hittar du all information!</p>
+                
                 <address>
                     <strong>Spork CO</strong><br>
                     123 Fancy Street<br>
@@ -57,7 +80,9 @@
                     <span>Telefon:<a href="tel:+46812345678">+46 8 123 45 678</a></span><br>
                     <span>E-post: <a href="mailto:info@sporkco.se">info@sporkco.se</a></span>
                 </address>
+
             </section>
+
         </section>
 
     </main>

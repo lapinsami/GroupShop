@@ -21,12 +21,14 @@ header {
 }
 
 /* Dividing the header into 3 sections */
-section {
+.sectheader {
     /* box-sizing: auto; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    
 }
+
 
 /* Just a dummy */
 .empty {
@@ -39,6 +41,7 @@ section {
     display: flex;
     width: 100%;
     text-align: center;
+    justify-content: center;
     color: green;
     font-size: 2rem;
     padding: 0.7rem;
@@ -138,7 +141,7 @@ textarea {
 ------------------------------------*/
 
 .body-profile {
-background-color: grey;
+    background-color: grey;
 }
 
 .profile {
@@ -147,22 +150,22 @@ background-color: grey;
     justify-content: center;
     justify-content: flex-start;
     background-color: gray;
-   
+
     box-sizing: border-box;
     width: 100%;
     height: auto;
     max-width: 1200px;
     margin: auto;
-    
+
 }
 
 
 .profile>section {
     display: flex;
 
-   font-size: 1.3rem;
-   border-radius: 20%;
-   
+    font-size: 1.3rem;
+    border-radius: 20%;
+
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -182,10 +185,10 @@ background-color: grey;
     .profile>section {
         display: flex;
         flex: 1;
-        min-width: 200px;       
+        min-width: 200px;
     }
 }
-    
+
 
 .profile>section>article {
     display: flex;
@@ -200,24 +203,24 @@ background-color: grey;
 .profile>section>h1 {
     display: flex;
     align-self: center;
-    max-width: 100%;    
+    max-width: 100%;
 }
 
 .profile>section>article>section {
     display: flex;
 
     gap: 10px;
-    max-width: 100%;   
+    max-width: 100%;
 }
 
 .profile>section>article>section {
-    gap: 1rem;    
+    gap: 1rem;
 }
 
 .robotnic {
     align-self: center;
     max-width: 100%;
-   
+
     margin-top: 2rem;
 
     border-radius: 50%;
@@ -254,67 +257,181 @@ Yta där jag/christofer skriver för profile  */
 
 /* Yta där jag/christofer skriver för contact  
 ------------------------------------ */
+.contact {
+    display: flex;
+    flex-grow: 1;
+    box-shadow: inset 0px 0px 20px black;
+    background-color: white;
+}
 
 .left {
     display: flex;
-
+    flex-direction: column;
     background-color: green;
     align-items: center;
     justify-content: center;
-   width: 100%;
-   height: 100%;
+    width: 100%;
+    height: 100%;
 
     color: white;
-    /* font-size: 2rem;     */
-    
-    padding: 0.7rem;
 
+    padding: 2rem;
+
+}
+
+.form1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: yellow; */
+    width: 100%;
+    
+    border: 20x solid red;
+}
+
+.left>form>section {
+    gap: 5px;
+}
+
+.left>h2 {
+    margin-bottom: 1rem;
+}
+
+.left>form>button {
+    margin-top: 0.4rem;
+    cursor: pointer;    
+}
+
+.left>form>input {
+    margin-top: 0.4rem;
+    width: 100%;
+}
+
+.left>form>textarea {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 3px;
 }
 
 .right {
     display: flex;
-
+    
     flex-direction: column;
 
     background-color: green;
     align-items: center;
     justify-content: center;
-    
+
     color: white;
     width: 100%;
     height: 100%;
     padding: 0.7rem;
-
-    /* margin: 20px auto; */
 }
 
-.right > p:nth-child(2) {
- margin-bottom: 1rem;
+.right > p {
+    text-align: center;    
+}
+.right>p:nth-child(2) {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 
-.right > address {
+.right>address {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .center {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40rem;
-    height: 40rem;   
-    box-shadow: 0px 0px 40px black;    
-    border-style:double ridge;
- }
-
-
-.contact {
-    display: flex;
-    box-shadow:inset 0px 0px 20px black;
-    background-color: white;
+    height: 40rem;
+    box-shadow: 0px 0px 40px black;
+    border-style: double ridge;
 }
+
+.form1 > section {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+
+    .contact {
+        display: flex;
+        flex: 1;        
+    }
+
+    .center>.right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 20px;
+        /* border: 5px solid black; */
+    }
+    .center>.left {
+        display: flex;
+        flex: 1;
+        min-width: 20px;
+     
+    }
+    .center {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        flex: 1;
+        min-width: 200px;
+    }   
+    .form1 {
+        display: flex;
+        flex: 1;
+        /* border: 2px solid pink;   */
+         
+    }  
+
+    .form1 > input {
+        display: flex;       
+        flex-direction: row;
+        padding: 1px;
+        /* border: 3px solid blue; */
+        
+    }
+
+    .form1 > section > input {
+        display: flex;
+        flex-direction: column;
+        /* border: 3px solid red; */
+        padding: 3px;
+    }
+
+    .form1 > section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left>form>textarea {
+        /* margin-top: 0.4rem; */
+        width: 100%;
+        /* padding: 1px; */
+        /* min-width: 2px; */
+        border-radius: 3px;
+    }
+
+    .right > address {
+        flex-direction: column;
+    }
+   
+    .left>form>section {
+        gap: 7px;
+    }
+}
+
 
 /*------------------------------------
 Yta där jag/christofer skriver för contact  */
@@ -325,37 +442,46 @@ Yta där jag/christofer skriver för contact  */
 .form-group {
     margin-bottom: 15px;
 }
+
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
-input[type="text"], input[type="number"] {
+
+input[type="text"],
+input[type="number"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
+
 .quantity-control {
     display: flex;
     align-items: center;
 }
+
 .quantity-control button {
     padding: 5px 10px;
     margin: 0 5px;
     cursor: pointer;
 }
+
 .quantity-control input {
     width: 50px;
     text-align: center;
 }
+
 h2 {
     font-size: 20px;
     margin-top: 15px;
 }
+
 .product-section {
     margin-top: 20px;
     text-align: center;
 }
+
 .product-section img {
     margin-bottom: 15px;
 }
@@ -487,6 +613,7 @@ h2 {
     min-width: 150px;
     padding: 5px;
 }
+
 .product-in-cart-price {
     display: flex;
     width: 100px;
