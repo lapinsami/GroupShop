@@ -300,6 +300,12 @@ h2 {
     margin: auto;
 }
 
+@media (max-width: 1000px) {
+    .faq-container {
+        width: 100%;
+    }
+}
+
 /* question button */
 .faq-question {
     background-color: green;
