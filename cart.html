@@ -40,9 +40,136 @@
     </header>
 
     <main>
+        <script src="js/products.js"></script>
 
-        <p>Cart</p>
-        
+        <div class="cart-container">
+            <div class="product-in-cart" style="outline: 0">
+                <div class="product-in-cart-image">
+
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>product</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    price
+                </div>
+                <div class="product-in-cart-controls">
+                    quantity
+                </div>
+            </div>
+
+            <div class="product-in-cart">
+                <div class="product-in-cart-image">
+                    <a href="product-details.html?product=spork">
+                        <img src="img/spork-color.jpg" alt="spork image" style="width: 100px">
+                    </a>
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>spork</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    12.90
+                </div>
+                <div class="product-in-cart-controls">
+                    <p>x&nbsp;&nbsp;&nbsp;</p>
+                    <div class="quantity-control">
+                        <input type="number" id="quantity1" value="1" min="1">
+                    </div>
+                    <a href="#">
+                        <img src="img/trash.png" alt="trashcan" style="width: 32px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-in-cart">
+                <div class="product-in-cart-image">
+                    <a href="product-details.html?product=spoon">
+                        <img src="img/spoon.jpg" alt="spoon image" style="width: 100px">
+                    </a>
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>spoon</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    7.90
+                </div>
+                <div class="product-in-cart-controls">
+                    <p>x&nbsp;&nbsp;&nbsp;</p>
+                    <div class="quantity-control">
+                        <input type="number" id="quantity2" value="1" min="1">
+                    </div>
+
+                    <a href="#">
+                        <img src="img/trash.png" alt="trashcan" style="width: 32px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-in-cart">
+                <div class="product-in-cart-image">
+                    <a href="product-details.html?product=fork">
+                        <img src="img/fork.jpg" alt="fork image" style="width: 100px">
+                    </a>
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>fork</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    7.90
+                </div>
+                <div class="product-in-cart-controls">
+                    <p>x&nbsp;&nbsp;&nbsp;</p>
+                    <div class="quantity-control">
+                        <input type="number" id="quantity3" value="2" min="1">
+                    </div>
+
+                    <a href="#">
+                        <img src="img/trash.png" alt="trashcan" style="width: 32px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-in-cart">
+                <div class="product-in-cart-image">
+                    <a href="product-details.html?product=knife">
+                        <img src="img/knife.jpg" alt="knife image" style="width: 100px">
+                    </a>
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>knife</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    6.90
+                </div>
+                <div class="product-in-cart-controls">
+                    <p>x&nbsp;&nbsp;&nbsp;</p>
+                    <div class="quantity-control">
+                        <input type="number" id="quantity4" value="1" min="1">
+                    </div>
+
+                    <a href="#">
+                        <img src="img/trash.png" alt="trashcan" style="width: 32px">
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-in-cart" style="outline: 0">
+                <div class="product-in-cart-image">
+
+                </div>
+                <div class="product-in-cart-name">
+                    <p><b>total</b></p>
+                </div>
+                <div class="product-in-cart-price">
+                    555.67 kr
+                </div>
+                <div class="product-in-cart-controls">
+                    <button onclick="location.href='#'" class="order-button">
+                        Order
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
