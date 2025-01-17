@@ -489,8 +489,14 @@ h2 {
 
 /* container div */
 .faq-container {
-    width: 75%;
+    width: 1200px;
     margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .faq-container {
+        width: 100%;
+    }
 }
 
 /* question button */
@@ -499,6 +505,7 @@ h2 {
     color: white;
     cursor: pointer;
     padding: 18px;
+    margin: 0;
     width: 100%;
     border: none;
     text-align: left;
@@ -554,10 +561,14 @@ h2 {
     min-width: 500px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: calc(1200px + 2rem)) {
     .product-box {
         flex: 100%;
         max-width: 100%;
+        min-width: 100%;
+    }
+    #products-container {
+        min-width: 0;
     }
 }
 
@@ -567,14 +578,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    width: 75%;
+    width: 1200px;
     margin: auto;
-}
-
-@media (max-width: 800px) {
-    .cart-container {
-        width: 100%;
-    }
 }
 
 .product-in-cart {
@@ -622,6 +627,36 @@ h2 {
     padding: 5px;
 }
 
+@media (max-width: calc(1200px + 2rem)) {
+    .cart-container {
+        width: 100%;
+    }
+    .product-in-cart {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    .product-in-cart-controls {
+        padding-right: 0;
+        flex-grow: 0;
+        width: 100px;
+    }
+    .product-in-cart-price {
+        width: 75px;
+        padding: 0;
+    }
+    .product-in-cart-image {
+        max-width: 100px;
+        width: 100px;
+        min-width: 100px;
+        padding: 0;
+    }
+    .product-in-cart-name {
+        padding: 0;
+        padding-left: 10px;
+    }
+}
+
 .order-button {
     cursor: pointer;
     background-color: green;
@@ -630,4 +665,28 @@ h2 {
     width: 100px;
     height: 50px;
     text-align: center;
+}
+
+/* about page */
+.about-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .about-container {
+        width: 100%;
+        grid-template-columns: auto;
+    }
+}
+
+.about-image {
+    margin: 20px 50px;
+}
+
+.about-text {
+    font-size: 22px;
+    margin: 20px 50px;
 }
