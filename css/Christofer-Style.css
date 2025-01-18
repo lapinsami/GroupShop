@@ -43,8 +43,18 @@ header {
     text-align: center;
     justify-content: center;
     color: green;
-    font-size: 2rem;
-    padding: 0.7rem;
+    font-size: 32px;
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .HeaderName {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 24px;
+    }
 }
 
 /* Box for login/cart/profile */
