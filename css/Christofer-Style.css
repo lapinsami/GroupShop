@@ -74,21 +74,40 @@ main>.searchbar {
     padding: 0.5rem;
 }
 
-nav {
-    background-color: green;
-    padding: 0.7rem;
-    text-decoration: none;
-}
-
 a {
     text-decoration: none;
     color: whitesmoke;
     padding: 0rem 1rem;
 }
 
+
 /* turns the text lightgrey when hovered */
 a:hover {
     color: lightgray;
+}
+
+nav {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    overflow: hidden;
+}
+
+nav a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+nav a.active {
+    background-color: darkgreen;
+    color: white;
 }
 
 main {
@@ -461,11 +480,11 @@ Yta där jag/christofer skriver för contact  */
     border: none;
     text-align: left;
     outline: none;
-    font-size: 18px;
+    font-size: 26px;
 }
 
 /* change color when question active */
-.active {
+.faq-active {
     background-color: darkgreen;
 }
 
@@ -482,7 +501,7 @@ Yta där jag/christofer skriver för contact  */
     margin-left: 5px;
 }
 
-.active:after {
+.faq-active:after {
     content: "\2796";
 }
 
@@ -492,6 +511,7 @@ Yta där jag/christofer skriver för contact  */
     display: none;
     overflow: hidden;
     background-color: lightgray;
+    font-size: 20px;
 }
 
 /* for product.html */
@@ -606,6 +626,7 @@ Yta där jag/christofer skriver för contact  */
         width: 100px;
         min-width: 100px;
         padding: 0;
+        padding-top: 6px;
     }
     .product-in-cart-name {
         padding: 0;
