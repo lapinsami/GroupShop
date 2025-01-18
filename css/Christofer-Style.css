@@ -20,13 +20,19 @@ header {
     background-color: white;
 }
 
+a {
+    text-decoration: none;
+    padding: 0rem 1rem;
+}
+
 /* Dividing the header into 3 sections */
 .sectheader {
     /* box-sizing: auto; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+    text-decoration: none;
+    color: green;
 }
 
 
@@ -44,9 +50,13 @@ header {
     justify-content: center;
     color: green;
     font-size: 32px;
-    padding: 8px;
+    padding: 8px 5px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.HeaderName a:visited {
+    color: green;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
@@ -97,17 +107,7 @@ main>.searchbar {
     padding: 0.5rem;
 }
 
-a {
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 0rem 1rem;
-}
-
-
 /* turns the text lightgrey when hovered */
-a:hover {
-    color: lightgray;
-}
 
 .topnav {
     background-color: green;
@@ -122,6 +122,7 @@ a:hover {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color: white;
 }
 
 .topnav a:hover {
