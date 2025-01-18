@@ -78,6 +78,19 @@ header {
     width: 2rem;
 }
 
+@media (max-width: calc(1200px + 2rem)) {
+    .login-button {
+        padding: 0;
+        width: 3rem;
+    }
+    .Login-Cart {
+        padding: 0;
+    }
+    .cart-click {
+        width: 1.5rem;
+    }
+}
+
 main>.searchbar {
     display: flex;
     justify-content: center;
@@ -184,6 +197,12 @@ main {
 
 .profile-button {
     width: 2rem;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .profile-button {
+        width: 1.5rem;
+    }
 }
 
 footer {
