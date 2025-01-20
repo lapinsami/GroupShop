@@ -463,6 +463,15 @@ Yta där jag/christofer skriver för profile  */
     flex-direction: row;
 }
 
+.right > address > span > a{
+    text-decoration: none;
+    color: white;
+}
+
+.right > address > span > a:hover{
+    color: lightgray;
+}
+
 @media (max-width: 600px) {
 
     .contact {
