@@ -55,7 +55,15 @@ a {
     overflow: hidden;
 }
 
+.HeaderName a {
+    color: green;
+}
+
 .HeaderName a:visited {
+    color: green;
+}
+
+.HeaderName a:hover {
     color: green;
 }
 
