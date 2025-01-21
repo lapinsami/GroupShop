@@ -50,7 +50,44 @@
 
     <main>
 
-        <p>Checkout</p>
+        <div class="checkout-container">
+            <a href="cart.html">&lt; Back to cart</a>
+            <div class="delivery-info">
+                <form>
+                    <div>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name">
+                    </div>
+
+                    <div>
+                        <label for="phone_number">Phone number:</label><br>
+                        <input type="text" id="phone_number" name="phone_number">
+                    </div>
+
+                    <div>
+                        <label for="name">Address:</label><br>
+                        <input type="text" id="address" name="address">
+                    </div>
+
+                    <div>
+                        <label for="name">Zip Code:</label><br>
+                        <input type="text" id="zip_code" name="zip_code">
+                    </div>
+                </form>
+            </div>
+
+            <div class="payment-card" href='javascript:void(0);'>
+                <img src="img/card.png" alt="bank card" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="payment-swish" href='javascript:void(0);'>
+                <img src="img/swish.png" alt="swish-logo" style="width: 100%; height: auto;">
+            </div>
+
+            <button onclick="location.href='javascript:void(0);'" class="order-button">
+                Confirm order
+            </button>
+        </div>
         
     </main>
 
