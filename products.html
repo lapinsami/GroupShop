@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css"> <!--Denna skall ändras till style.css efter merge -->
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <title>Products</title>
@@ -21,7 +22,7 @@
             <!-- Box for login and cart -->
             <section class="Login-Cart">
                 <a href="profile.html">
-                    <img src="img/login.png" alt="Click to get to Profile" class="profile-button" width="10%">
+                    <img src="img/login.png" alt="Click to get to Profile" class="profile-button" style="width: 32px">
                 </a>
                 <button onclick="location.href='login.html'" class="login-button">
                     Login
@@ -52,7 +53,7 @@
 
         <form action="products.html" method="GET" class="searchbar">
             <input type="search" name="query" placeholder="Search here..." required>
-            <button type="submit">Search</button>
+            <button class="order-button" type="submit">Search</button>
         </form>
 
         <div id="products-container">
@@ -72,7 +73,7 @@
                     productsToShow +=     `<a href="product-details.html?product=${p.product_name}">`;
                     productsToShow +=         `<img src="${p.image_url}" alt="${p.product_name} image">`;
                     productsToShow +=     `</a>`;
-                    productsToShow +=     `<p><b>${p.price}</b></p>`;
+                    productsToShow +=     `<p><b>${p.price} kr</b></p>`;
                     productsToShow += `</div>`;
                 }
             }

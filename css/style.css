@@ -53,6 +53,7 @@ a {
     padding: 8px 5px;
     white-space: nowrap;
     overflow: hidden;
+    font-family: Boboto, sans-serif;
 }
 
 .HeaderName a {
@@ -71,7 +72,7 @@ a {
     .HeaderName {
         padding-left: 0;
         padding-right: 0;
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -89,6 +90,11 @@ a {
     padding: 0.5rem;
     width: 5rem;
     cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    height: 2.5rem;
+    text-align: center;
 }
 
 /* Button for Cart */
@@ -101,6 +107,11 @@ a {
         padding: 0;
         width: 3rem;
     }
+
+    header .login-button {
+        height: 24px;
+    }
+
     .Login-Cart {
         padding: 0;
     }
@@ -122,6 +133,7 @@ main>.searchbar {
     color: white;
     text-decoration: none;
     overflow: hidden;
+    font-family: Boboto, sans-serif;
 }
 
 .topnav a {
@@ -205,12 +217,12 @@ main {
 }
 
 .profile-button {
-    width: 2rem;
+    width: 32px;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
     .profile-button {
-        width: 1.5rem;
+        width: 24px;
     }
 }
 
@@ -227,18 +239,42 @@ footer {
     /* Centrerar texten i footern */
 }
 
-textarea {
-    resize: none;
+.username {
+    display: flex;
+    margin: 5px;
 }
-
-.username,
-.password,
+.password {
+    display: flex;
+    margin: 5px;
+}
 .button-login {
     font-size: 1.5rem;
 }
 
 .button-login {
     cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.login-container .order-button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.login-container input {
+    resize: none;
+    width: 300px;
+    font-size: 22px;
+    border: green solid 1px;
+    margin: 5px;
 }
 
 /* Yta där jag/christofer skriver för profile 
@@ -557,6 +593,7 @@ Yta där jag/christofer skriver för contact  */
 .faq-container {
     width: 1200px;
     margin: auto;
+    font-family: Boboto, sans-serif;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
@@ -612,13 +649,27 @@ Yta där jag/christofer skriver för contact  */
 
 /* for product.html */
 
+.searchbar button {
+    margin-left: 5px;
+}
+
+.searchbar input {
+    width: 250px;
+    font-size: 22px;
+    padding-left: 10px;
+    border: green solid 1px;
+}
+
 #products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: Boboto, sans-serif;
 }
 
 .product-box {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 4px;
     padding: 2px;
@@ -626,6 +677,16 @@ Yta där jag/christofer skriver för contact  */
     flex: calc(20% - 20px);
     max-width: calc(20% - 20px);
     min-width: 500px;
+}
+
+.product-box p {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.product-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
@@ -647,6 +708,7 @@ Yta där jag/christofer skriver för contact  */
     justify-content: left;
     width: 1200px;
     margin: auto;
+    font-family: Boboto, sans-serif;
 }
 
 .product-in-cart {
@@ -746,6 +808,7 @@ Yta där jag/christofer skriver för contact  */
     grid-template-columns: auto auto;
     width: 1200px;
     margin: auto;
+    font-family: Boboto, sans-serif;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
@@ -773,6 +836,7 @@ Yta där jag/christofer skriver för contact  */
     width: 1200px;
     margin: auto;
     justify-content: center;
+    font-family: Boboto, sans-serif;
 }
 
 #product-image {
@@ -851,6 +915,7 @@ Yta där jag/christofer skriver för contact  */
     grid-template-columns: auto auto auto;
     column-gap: 25px;
     row-gap: 25px;
+    font-family: Boboto, sans-serif;
 }
 
 .checkout-container a {
@@ -929,6 +994,7 @@ Yta där jag/christofer skriver för contact  */
     .checkout-container .order-button {
         margin-left: 0;
     }
+
     .delivery-info form {
         grid-template-columns: auto;
     }
