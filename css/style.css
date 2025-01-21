@@ -90,6 +90,11 @@ a {
     padding: 0.5rem;
     width: 5rem;
     cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    height: 2.5rem;
+    text-align: center;
 }
 
 /* Button for Cart */
@@ -229,18 +234,42 @@ footer {
     /* Centrerar texten i footern */
 }
 
-textarea {
-    resize: none;
+.username {
+    display: flex;
+    margin: 5px;
 }
-
-.username,
-.password,
+.password {
+    display: flex;
+    margin: 5px;
+}
 .button-login {
     font-size: 1.5rem;
 }
 
 .button-login {
     cursor: pointer;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.login-container .order-button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+.login-container input {
+    resize: none;
+    width: 300px;
+    font-size: 22px;
+    border: green solid 1px;
+    margin: 5px;
 }
 
 /* Yta där jag/christofer skriver för profile 
