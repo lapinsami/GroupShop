@@ -638,6 +638,20 @@ Yta där jag/christofer skriver för contact  */
     content: "\2796";
 }
 
+.faq-container a {
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-container a:visited {
+    color: green;
+}
+
+.faq-container a:hover {
+    color: darkgreen;
+}
+
 /* answer box */
 .faq-answer {
     padding: 16px 32px;
@@ -997,5 +1011,53 @@ Yta där jag/christofer skriver för contact  */
 
     .delivery-info form {
         grid-template-columns: auto;
+    }
+}
+
+.returns-container {
+    font-family: Boboto, sans-serif;
+    margin: auto;
+    width: 1200px;
+}
+
+.returns-container > h1 {
+    margin: 5px;
+}
+
+.returns-container > p {
+    margin: 5px;
+}
+
+.returns-container a {
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+
+.returns-container a:visited {
+    color: green;
+}
+
+.returns-container a:hover {
+    color: darkgreen;
+}
+
+.returns-container > form {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    outline: green solid 1px;
+    padding: 10px;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .returns-container {
+        width: 100%;
+    }
+
+    .returns-container > form {
+        grid-template-columns: auto;
+        justify-content: center;
     }
 }
