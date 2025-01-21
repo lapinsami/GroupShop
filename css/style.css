@@ -843,3 +843,93 @@ Yta där jag/christofer skriver för contact  */
         grid-column: 1;
     }
 }
+
+.checkout-container {
+    margin: auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.checkout-container a {
+    color: green;
+    text-decoration: none;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.checkout-container a:visited {
+    color: green;
+}
+
+.checkout-container a:hover {
+    color: green;
+}
+
+.delivery-info {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    width: 100%;
+    outline: green solid 1px;
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+.delivery-info form {
+    column-gap: 25px;
+    row-gap: 15px;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.delivery-info input {
+    width: 100%;
+    font-size: 22px;
+    border: green solid 1px;
+}
+
+.payment-card {
+    width: 100%;
+    cursor: pointer;
+    padding: 50px;
+    outline: green solid 1px;
+    grid-row: 3;
+}
+
+.payment-swish {
+    width: 100%;
+    cursor: pointer;
+    padding: 50px;
+    outline: green solid 1px;
+    grid-row: 3;
+}
+
+.checkout-container .order-button {
+    width: 150px;
+    height: 75px;
+    justify-self: right;
+    align-self: end;
+    margin-left: 200px;
+    grid-row: 3;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .checkout-container {
+        width: 100%;
+    }
+    .payment-card {
+        padding: 3px;
+    }
+    .payment-swish {
+        padding: 3px;
+    }
+    .checkout-container .order-button {
+        margin-left: 0;
+    }
+    .delivery-info form {
+        grid-template-columns: auto;
+    }
+}
