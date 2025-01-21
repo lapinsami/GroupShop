@@ -1,0 +1,845 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    justify-content: space-between;
+
+    position: sticky;
+    z-index: 9100;
+    top: 0;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    padding: 0rem 1rem;
+}
+
+/* Dividing the header into 3 sections */
+.sectheader {
+    /* box-sizing: auto; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: green;
+}
+
+
+/* Just a dummy */
+.empty {
+    width: 100%;
+    /* background-color: black; */
+}
+
+/* Name for the company in the header */
+.HeaderName {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    color: green;
+    font-size: 32px;
+    padding: 8px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.HeaderName a {
+    color: green;
+}
+
+.HeaderName a:visited {
+    color: green;
+}
+
+.HeaderName a:hover {
+    color: green;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .HeaderName {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 24px;
+    }
+}
+
+/* Box for login/cart/profile */
+.Login-Cart {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+/* Login button */
+.login-button {
+    padding: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
+}
+
+/* Button for Cart */
+.cart-click {
+    width: 2rem;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .login-button {
+        padding: 0;
+        width: 3rem;
+    }
+    .Login-Cart {
+        padding: 0;
+    }
+    .cart-click {
+        width: 1.5rem;
+    }
+}
+
+main>.searchbar {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* turns the text lightgrey when hovered */
+
+.topnav {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.topnav a:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: darkgreen;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.nav-link-container {
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: 7px;
+        margin-bottom: 0;
+        margin-right: 5px;
+        margin-left: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .topnav .icon:hover {
+        background-color: transparent;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .nav-link-container {
+        width: 100%;
+    }
+}
+
+main {
+    padding: 1rem;
+    flex: 1;
+    /* display: flex auto; */
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+
+    main>img {
+        width: 400px;
+    }
+}
+
+.profile-button {
+    width: 2rem;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .profile-button {
+        width: 1.5rem;
+    }
+}
+
+footer {
+    position: sticky;
+    /* Sätter fast footern i botten */
+    z-index: 100;
+    bottom: 0;
+    flex-direction: row;
+    background-color: green;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    /* Centrerar texten i footern */
+}
+
+textarea {
+    resize: none;
+}
+
+.username,
+.password,
+.button-login {
+    font-size: 1.5rem;
+}
+
+.button-login {
+    cursor: pointer;
+}
+
+/* Yta där jag/christofer skriver för profile 
+------------------------------------*/
+
+.body-profile {
+    background-color: grey;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    background-color: gray;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+
+.profile>section {
+    display: flex;
+
+    font-size: 1.3rem;
+    border-radius: 20%;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1rem;
+
+    flex-wrap: wrap;
+
+    background-color: lightgray;
+    flex: 1;
+
+    border: 3px solid darkgray;
+    box-shadow: 0px 0px 40px black;
+}
+
+
+
+.profile>section>article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex-wrap: nowrap;
+
+    max-width: 100%;
+}
+
+.profile>section>h1 {
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+}
+
+.profile>section>article>section {
+    display: flex;
+
+    gap: 10px;
+    max-width: 100%;
+}
+
+.profile>section>article>section {
+    gap: 1rem;
+}
+
+.robotnic {
+    align-self: center;
+    max-width: 100%;
+
+    margin-top: 2rem;
+
+    border-radius: 50%;
+}
+
+.mail {
+    font-style: italic;
+    font-weight: lighter;
+    color: black;
+    text-decoration: underline;
+}
+
+.mail:hover {
+    color: black;
+}
+
+.picture-change {
+    margin-top: 1rem;
+    background-color: green;
+    border-color: lightgray;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+    box-shadow: 0px 0px 20px black;
+}
+
+.picture-change:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .profile>section {
+        display: flex;
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+
+/*------------------------------------
+Yta där jag/christofer skriver för profile  */
+
+/* Yta där jag/christofer skriver för contact  
+------------------------------------ */
+.contact {
+    display: flex;
+    flex-grow: 1;
+    box-shadow: inset 0px 0px 20px black;
+    background-color: white;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    padding: 2rem;
+
+}
+
+.form1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: yellow; */
+    width: 100%;
+    
+}
+
+.left>form>section {
+    gap: 5px;
+}
+
+.left>h2 {
+    margin-bottom: 1rem;
+}
+
+.left>form>button {
+    margin-top: 0.4rem;
+    cursor: pointer;    
+}
+
+.left>form>input {
+    margin-top: 0.4rem;
+    width: 100%;
+}
+
+.left>form>textarea {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 3px;
+}
+
+.right {
+    display: flex;
+    
+    flex-direction: column;
+
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0.7rem;
+}
+
+.right > p {
+    text-align: center;    
+}
+.right>p:nth-child(2) {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.right>address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 40rem;
+    box-shadow: 0px 0px 40px black;
+    border-style: double ridge;
+}
+
+.form1 > section {
+    display: flex;
+    flex-direction: row;
+}
+
+.right > address > span > a{
+    text-decoration: none;
+    color: white;
+}
+
+.right > address > span > a:hover{
+    color: lightgray;
+}
+
+@media (max-width: 600px) {
+
+    .contact {
+        display: flex;
+        flex: 1;        
+    }
+
+    .center>.right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 20px;
+        /* border: 5px solid black; */
+    }
+    .center>.left {
+        display: flex;
+        flex: 1;
+        min-width: 20px;
+     
+    }
+    .center {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        flex: 1;
+        min-width: 200px;
+    }   
+    .form1 {
+        display: flex;
+        flex: 1;
+        /* border: 2px solid pink;   */
+         
+    }  
+
+    .form1 > input {
+        display: flex;       
+        flex-direction: row;
+        padding: 1px;
+        /* border: 3px solid blue; */
+        
+    }
+
+    .form1 > section > input {
+        display: flex;
+        flex-direction: column;
+        /* border: 3px solid red; */
+        padding: 3px;
+    }
+
+    .form1 > section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left>form>textarea {
+        /* margin-top: 0.4rem; */
+        width: 100%;
+        /* padding: 1px; */
+        /* min-width: 2px; */
+        border-radius: 3px;
+    }
+
+    .right > address {
+        flex-direction: column;
+    }
+   
+    .left>form>section {
+        gap: 7px;
+    }
+}
+
+
+/*------------------------------------
+Yta där jag/christofer skriver för contact  */
+
+
+/* for FAQ */
+
+/* container div */
+.faq-container {
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .faq-container {
+        width: 100%;
+    }
+}
+
+/* question button */
+.faq-question {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    margin: 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 26px;
+}
+
+/* change color when question active */
+.faq-active {
+    background-color: darkgreen;
+}
+
+/* change color when question hovered */
+.faq-question:hover {
+    color: black;
+    background-color: lightgreen;
+}
+
+.faq-question:after {
+    content: '\02795';
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq-active:after {
+    content: "\2796";
+}
+
+/* answer box */
+.faq-answer {
+    padding: 16px 32px;
+    display: none;
+    overflow: hidden;
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+/* for product.html */
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-box {
+    text-align: center;
+    margin: 4px;
+    padding: 2px;
+    outline: green solid 1px;
+    flex: calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    min-width: 500px;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .product-box {
+        flex: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    #products-container {
+        min-width: 0;
+    }
+}
+
+/* for cart.html */
+
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 1200px;
+    margin: auto;
+}
+
+.product-in-cart {
+    text-align: left;
+    margin: 4px;
+    padding: 2px;
+    outline: green solid 1px;
+    flex: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-in-cart-controls {
+    display: flex;
+    padding-right: 10px;
+    flex-grow: 0;
+    width: 200px;
+    align-items: center;
+    justify-content: right;
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+}
+
+.product-in-cart-name {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+}
+
+.product-in-cart-image {
+    display: flex;
+    max-width: 150px;
+    width: 150px;
+    min-width: 150px;
+    padding: 5px;
+}
+
+.product-in-cart-price {
+    display: flex;
+    width: 100px;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .cart-container {
+        width: 100%;
+    }
+    .product-in-cart {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    .product-in-cart-controls {
+        padding-right: 0;
+        flex-grow: 0;
+        width: 100px;
+    }
+    .product-in-cart-price {
+        width: 75px;
+        padding: 0;
+    }
+    .product-in-cart-image {
+        max-width: 100px;
+        width: 100px;
+        min-width: 100px;
+        padding: 0;
+        padding-top: 6px;
+    }
+    .product-in-cart-name {
+        padding: 0;
+        padding-left: 10px;
+    }
+}
+
+.order-button {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+/* about page */
+.about-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .about-container {
+        width: 100%;
+        grid-template-columns: auto;
+    }
+}
+
+.about-image {
+    margin: 20px 50px;
+}
+
+.about-text {
+    font-size: 22px;
+    margin: 20px 50px;
+}
+
+/* product-details.html */
+
+.product-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 150px auto auto;
+    width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+
+#product-image {
+    display: grid;
+    grid-row: 1 / span 2;
+    width: 300px;
+    margin-right: 20px;
+}
+
+#product-description {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 22px;
+}
+
+#product-name {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#price {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.product-details-controls {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: right;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .product-container {
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    #product-name {
+        grid-column: 1;
+        justify-content: center;
+    }
+    #product-image {
+        grid-row: 2;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #product-description {
+        grid-row: 3;
+        grid-column: 1;
+        justify-content: center;
+    }
+
+    #price {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .product-details-controls {
+        grid-row: 5;
+        grid-column: 1;
+    }
+}

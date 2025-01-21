@@ -20,13 +20,21 @@ header {
     background-color: white;
 }
 
+a {
+    text-decoration: none;
+    padding: 0rem 1rem;
+}
+
 /* Dividing the header into 3 sections */
-section {
+.sectheader {
     /* box-sizing: auto; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    text-decoration: none;
+    color: green;
 }
+
 
 /* Just a dummy */
 .empty {
@@ -39,9 +47,32 @@ section {
     display: flex;
     width: 100%;
     text-align: center;
+    justify-content: center;
     color: green;
-    font-size: 2rem;
-    padding: 0.7rem;
+    font-size: 32px;
+    padding: 8px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.HeaderName a {
+    color: green;
+}
+
+.HeaderName a:visited {
+    color: green;
+}
+
+.HeaderName a:hover {
+    color: green;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .HeaderName {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 24px;
+    }
 }
 
 /* Box for login/cart/profile */
@@ -65,27 +96,97 @@ section {
     width: 2rem;
 }
 
+@media (max-width: calc(1200px + 2rem)) {
+    .login-button {
+        padding: 0;
+        width: 3rem;
+    }
+    .Login-Cart {
+        padding: 0;
+    }
+    .cart-click {
+        width: 1.5rem;
+    }
+}
+
 main>.searchbar {
     display: flex;
     justify-content: center;
     padding: 0.5rem;
 }
 
-nav {
-    background-color: green;
-    padding: 0.7rem;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 0rem 1rem;
-}
-
 /* turns the text lightgrey when hovered */
-a:hover {
-    color: lightgray;
+
+.topnav {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.topnav a:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: darkgreen;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.nav-link-container {
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        margin-top: 7px;
+        margin-bottom: 0;
+        margin-right: 5px;
+        margin-left: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .topnav .icon:hover {
+        background-color: transparent;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .nav-link-container {
+        width: 100%;
+    }
 }
 
 main {
@@ -105,6 +206,12 @@ main {
 
 .profile-button {
     width: 2rem;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .profile-button {
+        width: 1.5rem;
+    }
 }
 
 footer {
@@ -138,7 +245,7 @@ textarea {
 ------------------------------------*/
 
 .body-profile {
-background-color: grey;
+    background-color: grey;
 }
 
 .profile {
@@ -147,22 +254,22 @@ background-color: grey;
     justify-content: center;
     justify-content: flex-start;
     background-color: gray;
-   
+
     box-sizing: border-box;
     width: 100%;
     height: auto;
     max-width: 1200px;
     margin: auto;
-    
+
 }
 
 
 .profile>section {
     display: flex;
 
-   font-size: 1.3rem;
-   border-radius: 20%;
-   
+    font-size: 1.3rem;
+    border-radius: 20%;
+
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -182,10 +289,10 @@ background-color: grey;
     .profile>section {
         display: flex;
         flex: 1;
-        min-width: 200px;       
+        min-width: 200px;
     }
 }
-    
+
 
 .profile>section>article {
     display: flex;
@@ -200,24 +307,24 @@ background-color: grey;
 .profile>section>h1 {
     display: flex;
     align-self: center;
-    max-width: 100%;    
+    max-width: 100%;
 }
 
 .profile>section>article>section {
     display: flex;
 
     gap: 10px;
-    max-width: 100%;   
+    max-width: 100%;
 }
 
 .profile>section>article>section {
-    gap: 1rem;    
+    gap: 1rem;
 }
 
 .robotnic {
     align-self: center;
     max-width: 100%;
-   
+
     margin-top: 2rem;
 
     border-radius: 50%;
@@ -252,45 +359,195 @@ background-color: grey;
 /*------------------------------------
 Yta där jag/christofer skriver för profile  */
 
-/*Saga made dis*/
+/* Yta där jag/christofer skriver för contact  
+------------------------------------ */
+.contact {
+    display: flex;
+    flex-grow: 1;
+    box-shadow: inset 0px 0px 20px black;
+    background-color: white;
+}
 
-.form-group {
-    margin-bottom: 15px;
-}
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-input[type="text"], input[type="number"] {
+.left {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+    height: 100%;
+
+    color: white;
+
+    padding: 2rem;
+
 }
-.quantity-control {
+
+.form1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: yellow; */
+    width: 100%;
+    
+}
+
+.left>form>section {
+    gap: 5px;
+}
+
+.left>h2 {
+    margin-bottom: 1rem;
+}
+
+.left>form>button {
+    margin-top: 0.4rem;
+    cursor: pointer;    
+}
+
+.left>form>input {
+    margin-top: 0.4rem;
+    width: 100%;
+}
+
+.left>form>textarea {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 3px;
+}
+
+.right {
+    display: flex;
+    
+    flex-direction: column;
+
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0.7rem;
+}
+
+.right > p {
+    text-align: center;    
+}
+.right>p:nth-child(2) {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.right>address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 40rem;
+    box-shadow: 0px 0px 40px black;
+    border-style: double ridge;
 }
-.quantity-control button {
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
+
+.form1 > section {
+    display: flex;
+    flex-direction: row;
 }
-.quantity-control input {
-    width: 50px;
-    text-align: center;
+
+.right > address > span > a{
+    text-decoration: none;
+    color: white;
 }
-h2 {
-    font-size: 20px;
-    margin-top: 15px;
+
+.right > address > span > a:hover{
+    color: lightgray;
 }
-.product-section {
-    margin-top: 20px;
-    text-align: center;
+
+@media (max-width: 600px) {
+
+    .contact {
+        display: flex;
+        flex: 1;        
+    }
+
+    .center>.right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 20px;
+        /* border: 5px solid black; */
+    }
+    .center>.left {
+        display: flex;
+        flex: 1;
+        min-width: 20px;
+     
+    }
+    .center {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        flex: 1;
+        min-width: 200px;
+    }   
+    .form1 {
+        display: flex;
+        flex: 1;
+        /* border: 2px solid pink;   */
+         
+    }  
+
+    .form1 > input {
+        display: flex;       
+        flex-direction: row;
+        padding: 1px;
+        /* border: 3px solid blue; */
+        
+    }
+
+    .form1 > section > input {
+        display: flex;
+        flex-direction: column;
+        /* border: 3px solid red; */
+        padding: 3px;
+    }
+
+    .form1 > section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left>form>textarea {
+        /* margin-top: 0.4rem; */
+        width: 100%;
+        /* padding: 1px; */
+        /* min-width: 2px; */
+        border-radius: 3px;
+    }
+
+    .right > address {
+        flex-direction: column;
+    }
+   
+    .left>form>section {
+        gap: 7px;
+    }
 }
-.product-section img {
-    margin-bottom: 15px;
-}
+
+
+/*------------------------------------
+Yta där jag/christofer skriver för contact  */
+
 
 /* for FAQ */
 
@@ -317,11 +574,11 @@ h2 {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 18px;
+    font-size: 26px;
 }
 
 /* change color when question active */
-.active {
+.faq-active {
     background-color: darkgreen;
 }
 
@@ -338,7 +595,7 @@ h2 {
     margin-left: 5px;
 }
 
-.active:after {
+.faq-active:after {
     content: "\2796";
 }
 
@@ -348,6 +605,7 @@ h2 {
     display: none;
     overflow: hidden;
     background-color: lightgray;
+    font-size: 20px;
 }
 
 /* for product.html */
@@ -409,6 +667,11 @@ h2 {
     justify-content: right;
 }
 
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+}
+
 .product-in-cart-name {
     display: flex;
     flex-grow: 1;
@@ -424,6 +687,7 @@ h2 {
     min-width: 150px;
     padding: 5px;
 }
+
 .product-in-cart-price {
     display: flex;
     width: 100px;
@@ -456,6 +720,7 @@ h2 {
         width: 100px;
         min-width: 100px;
         padding: 0;
+        padding-top: 6px;
     }
     .product-in-cart-name {
         padding: 0;
@@ -495,4 +760,84 @@ h2 {
 .about-text {
     font-size: 22px;
     margin: 20px 50px;
+}
+
+/* product-details.html */
+
+.product-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 150px auto auto;
+    width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+
+#product-image {
+    display: grid;
+    grid-row: 1 / span 2;
+    width: 300px;
+    margin-right: 20px;
+}
+
+#product-description {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 22px;
+}
+
+#product-name {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#price {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.product-details-controls {
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: right;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+@media (max-width: calc(1200px + 2rem)) {
+    .product-container {
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    #product-name {
+        grid-column: 1;
+        justify-content: center;
+    }
+    #product-image {
+        grid-row: 2;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #product-description {
+        grid-row: 3;
+        grid-column: 1;
+        justify-content: center;
+    }
+
+    #price {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .product-details-controls {
+        grid-row: 5;
+        grid-column: 1;
+    }
 }

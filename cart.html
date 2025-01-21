@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Christofer-Style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="stylesheet" href="css/style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <title>Costumer cart</title>
 </head>
 
 <body>
     <header>
-        <section>
+        <section class="sectheader">
             <!-- Just to make the space evenly amongst sections -->
             <section class="empty"></section>
 
             <!-- Box for Company name -->
-            <section class="HeaderName">Sporks CO</section>
+            <section class="HeaderName"><a href="index.html">Sporks CO</a></section>
 
             <!-- Box for login and cart -->
             <section class="Login-Cart">
@@ -30,13 +31,21 @@
                 </a>
             </section>
         </section>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="about.html">About</a>
-        </nav>
+
+        <script src="js/nav.js"></script>
+
+        <div class="topnav" id="responsive-nav">
+            <div class="nav-link-container">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                    <img src="img/menu.png" alt="mobile nav" style="width: 50px;">
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -73,7 +82,7 @@
                 <div class="product-in-cart-controls">
                     <p>x&nbsp;&nbsp;&nbsp;</p>
                     <div class="quantity-control">
-                        <input type="number" id="quantity1" value="1" min="1">
+                        <label for="quantity1"></label><input type="number" id="quantity1" value="1" min="1">
                     </div>
                     <a href="#">
                         <img src="img/trash.png" alt="trashcan" style="width: 32px">
@@ -164,7 +173,7 @@
                     555.67 kr
                 </div>
                 <div class="product-in-cart-controls">
-                    <button onclick="location.href='#'" class="order-button">
+                    <button onclick="location.href='checkout.html'" class="order-button">
                         Order
                     </button>
                 </div>

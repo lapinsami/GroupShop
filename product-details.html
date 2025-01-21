@@ -4,57 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Christofer-Style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="stylesheet" href="css/style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <title>Spork CO</title>
-    <style>
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        input[type="text"], input[type="number"] {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .quantity-control {
-            display: flex;
-            align-items: center;
-        }
-        .quantity-control button {
-            padding: 5px 10px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .quantity-control input {
-            width: 50px;
-            text-align: center;
-        }
-        h2 {
-            font-size: 20px;
-            margin-top: 15px;
-        }
-        .product-section {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .product-section img {
-            margin-bottom: 15px;
-        }
-    </style>
+
 </head>
 
 <body>
     <header>
-        <section>
+        <section class="sectheader">
             <!-- Just to make the space evenly amongst sections -->
             <section class="empty"></section>
 
             <!-- Box for Company name -->
-            <section class="HeaderName">Sporks CO</section>
+            <section class="HeaderName"><a href="index.html">Sporks CO</a></section>
 
             <!-- Box for login and cart -->
             <section class="Login-Cart">
@@ -69,105 +32,67 @@
                 </a>
             </section>
         </section>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="about.html">About</a>
-        </nav>
+
+        <script src="js/nav.js"></script>
+
+        <div class="topnav" id="responsive-nav">
+            <div class="nav-link-container">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                    <img src="img/menu.png" alt="mobile nav" style="width: 50px;">
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div id="description-container">
-            <p style="font-size: 28px; color: black;"><b>SPORK, din bästa vän i naturen!</b></p>
-        </div>
+        <div class="product-container">
+            <div id="product-image"><img src="img/knife.jpg" alt="knife image"></div>
+            <div id="product-name"><h2>name</h2></div>
+            <div id="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dictum dignissim ante, sit amet tempus neque bibendum et. Nam fermentum nisl ac est viverra, eget interdum diam pharetra. Donec interdum eget est at pretium. Proin pharetra erat sem, sit amet vehicula ante lobortis id. Quisque tincidunt ante sit amet fermentum facilisis. Donec ipsum nulla, convallis at venenatis quis, dapibus nec ante. Aenean tristique, arcu egestas hendrerit pretium, ex dolor ultricies ipsum, sit amet facilisis lectus felis tempus mauris. Sed purus mauris, interdum vel blandit eget, aliquet sed erat</div>
+            <div class="product-details-controls">
 
-        <section class="product-section">
-            <a href="product-details.html">
-                <div id="product-image-container">
-                    <img id="product-image" src="./img/spork.jpg" alt="Spork image" width="300px">
-                </div>
-            </a>
+                <div id="price">13.00</div>
 
-            <h2>Beställ här</h2>
-
-            
-
-            <div class="form-group">
-                <label for="color">Färgval</label>
-                <select id="color">
-                    <option value="blue">Blå</option>
-                    <option value="green">Grön</option>
-                    <option value="pink">Rosa</option>
-                    <option value="yellow">Gul</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="price">Pris</label>
-                <div id="price-container">
-                    <input type="number" id="price" value="12.90" readonly>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="quantity">Beställ</label>
                 <div class="quantity-control">
-                    <button type="button" onclick="changeQuantity(-1)">-</button>
-                    <input type="number" id="quantity" value="1" min="1">
-                    <button type="button" onclick="changeQuantity(1)">+</button>
+                    <label for="quantity0"></label><input type="number" id="quantity0" value="1" min="1">
                 </div>
+
+                <button onclick="location.href='#'" class="order-button" style="margin-left: 15px">
+                    Add to cart
+                </button>
             </div>
-
-            <button type="button" onclick="addToCart()" style="margin-top: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Lägg i varukorgen</button>
-        </section>
-
-        <script>
-            function changeQuantity(amount) {
-                const quantityInput = document.getElementById('quantity');
-                let currentQuantity = parseInt(quantityInput.value);
-
-                if (!isNaN(currentQuantity)) {
-                    currentQuantity += amount;
-
-                    // Ensure quantity doesn't go below 1
-                    if (currentQuantity < 1) {
-                        currentQuantity = 1;
-                    }
-
-                    quantityInput.value = currentQuantity;
-                }
-            }
-
-            function addToCart() {
-                const price = document.getElementById('price').value;
-                const quantity = document.getElementById('quantity').value;
-                alert(`Added to cart:\n\nItem: ${description}\nPrice: ${price} SEK\nQuantity: ${quantity}`);
-            }
-        </script>
+        </div>
 
         <script src="js/products.js"></script>
 
+
         <!-- set the product based on the url parameter -->
+
         <script>
-            let productDescriptionToShow = "";
+            let productDescription = "";
             let productImageUrl = "";
             let productPrice = 0.00;
 
             for (let i = 0; i < products.length; i++) {
                 let p = products[i];
                 if (product === p.product_name) {
-                    productDescriptionToShow = `<p style="font-size: 28px; color: black;"><b>${p.description}</b></p>`;
-                    productImageUrl = `<img id="product-image" src="${p.image_url}" alt="product image" height="300px">`;
-                    productPrice = `<input type="number" id="price" value="${p.price}" readonly>`;
+                    productDescription = `<p>${p.description}</p>`;
+                    productImageUrl = `<img id="product-image" src="${p.image_url}" alt="product image">`;
+                    productPrice = p.price;
                     break;
                 }
             }
-            document.getElementById("description-container").innerHTML = productDescriptionToShow;
-            document.getElementById("product-image-container").innerHTML = productImageUrl;
-            document.getElementById("price-container").innerHTML = productPrice;
+            document.getElementById("product-name").innerHTML = `<h2>${product}</h2>`;
+            document.getElementById("product-description").innerHTML = productDescription;
+            document.getElementById("product-image").innerHTML = productImageUrl;
+            document.getElementById("price").innerHTML = productPrice;
         </script>
+
 
     </main>
 

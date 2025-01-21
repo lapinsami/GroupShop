@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Christofer-Style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="stylesheet" href="css/style.css"> <!--Denna skall ändras till style.css efter merge -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <title>Contact Us</title>
 </head>
 
 <body>
     <header>
-        <section>
+        <section class="sectheader">
             <!-- Just to make the space evenly amongst sections -->
             <section class="empty"></section>
 
             <!-- Box for Company name -->
-            <section class="HeaderName">Sporks CO</section>
+            <section class="HeaderName"><a href="index.html">Sporks CO</a></section>
 
             <!-- Box for login and cart -->
             <section class="Login-Cart">
@@ -30,18 +31,68 @@
                 </a>
             </section>
         </section>
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="about.html">About</a>
-        </nav>
+
+        <script src="js/nav.js"></script>
+
+        <div class="topnav" id="responsive-nav">
+            <div class="nav-link-container">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a class="active" href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                    <img src="img/menu.png" alt="mobile nav" style="width: 50px;">
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main class="contact">
 
-        <p>Contact</p>
+        <section class="center">
+
+            <section class="left">
+
+                <h2>Kontakta Oss</h2>
+
+                <form action="" method="" class="form1">
+
+                    <section class="contsection">   
+
+                        <input type="name" id="name" name="name" placeholder="Name" required>
+                        
+                        <input type="email" id="email" name="email" placeholder="E-post" required>
+
+                    </section>
+
+                    <input type="phone" id="phone" name="phone" placeholder="Mobilnummer" required>
+
+                    <input type="subject" id="subject" name="subject" placeholder="Ämne" required>
+
+                    <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." required></textarea>
+
+                    <button type="submit">Skicka</a></button>
+                </form>
+
+            </section>
+
+            <section class="right">
+
+                <p>Behöver du nå oss?</p>
+                <p>Här hittar du all information!</p>
+
+                <address>
+                    <strong>Spork CO</strong><br>
+                    123 Fancy Street<br>
+                    Stockholm, SE 123 45<br><br>
+                    <span>Telefon:<a href="tel:+46812345678">+46 8 123 45 678</a></span><br>
+                    <span>E-post: <a href="mailto:info@sporkco.se">info@sporkco.se</a></span>
+                </address>
+
+            </section>
+
+        </section>
 
     </main>
 
