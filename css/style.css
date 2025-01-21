@@ -615,6 +615,17 @@ Yta där jag/christofer skriver för contact  */
 
 /* for product.html */
 
+.searchbar button {
+    margin-left: 5px;
+}
+
+.searchbar input {
+    width: 250px;
+    font-size: 22px;
+    padding-left: 10px;
+    border: green solid 1px;
+}
+
 #products-container {
     display: flex;
     flex-wrap: wrap;
