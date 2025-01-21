@@ -107,6 +107,11 @@ a {
         padding: 0;
         width: 3rem;
     }
+
+    header .login-button {
+        height: 24px;
+    }
+
     .Login-Cart {
         padding: 0;
     }
@@ -212,12 +217,12 @@ main {
 }
 
 .profile-button {
-    width: 2rem;
+    width: 32px;
 }
 
 @media (max-width: calc(1200px + 2rem)) {
     .profile-button {
-        width: 1.5rem;
+        width: 24px;
     }
 }
 
@@ -989,6 +994,7 @@ Yta där jag/christofer skriver för contact  */
     .checkout-container .order-button {
         margin-left: 0;
     }
+
     .delivery-info form {
         grid-template-columns: auto;
     }
