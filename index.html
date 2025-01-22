@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Anpassning för mobila enheter */--->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css"> <!--Denna skall ändras till style.css efter merge -->
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
@@ -49,44 +49,59 @@
         </div>
     </header>
 
-    <main>
+    <main style="font-family: 'Roboto', sans-serif;">
 
-        <body>
-            <header style="position: relative;">
-                <img src="img/sporkfamiljy.jpg" alt="sporkfamiljy"></img>
-                <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-                    Welcome to SPORK CO
-                </h1>
-            </header>
-        </body>
+        <header style="position: relative; height: 10cm; background: url('img/sprokhead2.jpg') no-repeat center center; background-size: cover;">
+            <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+                Welcome to SPORK CO
+            </h1>
+        </header>
     
-            
         <p>Spork CO is the ultimate site for outdoor enthusiasts, offering expert advice and reviews of top-rated gear and accessories.</p>
-            Whether you're hiking, camping, or enjoying other outdoor activities, we have the equipment you need for every weather, season, and environment. </p>
-            Trust our independent editorial team to recommend the best products for your adventures.</p>
-        <p>Founded in 1996, Spork CO has been a leading name in fishing, outdoor gear, and adventure activities. In January 2025, Christofer, Saga and Sami built this awesome webpage!</p>
-
-
+        <p>Our mission is to help you find the best products for your outdoor adventures. We provide detailed reviews and recommendations for a wide range of products, including fishing gear, camping equipment, hiking essentials, and more.</p>
+        <p>Whether you're hiking, camping, or enjoying other outdoor activities, we have the equipment you need for every weather, season, and environment.</p>
+        <p>Trust our independent editorial team to recommend the best products for your adventures.</p>
+        <p>Founded in 1996, Spork CO has been a leading name in fishing, outdoor gear, and adventure activities. In January 2025, Christofer, Saga, and Sami built this awesome webpage!</p>
+    
         <div class="toplist">
             <div class="uk-container">
                 <div class="uk-flex uk-flex-right uk-flex-between">
                     <div class="uk-margin-right uk-text-left">
-                        <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <polyline fill="none" stroke="#a0ff91" stroke-width="1.1" points="4,10 8,15 17,4"></polyline>
-                        </svg> Selected products at the right stores
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <polyline fill="none" stroke="#006400" stroke-width="1.5" points="4,10 8,15 17,4"></polyline>
+                        </svg> <span class="highlighted-text">Selected products at the right stores</span>
                         <div style="margin-left: 15px; display: inline-block;" class="uk-visible@m">
-                            <svg width="16" height="16" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <polyline fill="none" stroke="#a0ff91" stroke-width="1.1" points="4,10 8,15 17,4"></polyline>
-                            </svg> In stock with fast delivery
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <polyline fill="none" stroke="#006400" stroke-width="1.5" points="4,10 8,15 17,4"></polyline>
+                            </svg> <span class="highlighted-text">In stock with fast delivery</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
+    
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <p>Subscribe to our newsletter for updates and exclusive offers!</p>
+            <button class="newsletter-button" onclick="subscribeNewsletter()">Sign Up for Newsletter</button>
+        </div>
+        
+        <script>
+            function subscribeNewsletter() {
+                // Visa en ruta där användaren kan ange sin e-postadress
+                const email = prompt("Enter your email to subscribe to our newsletter:");
+                
+                // Kontrollera om en e-postadress matades in
+                if (email) {
+                    alert(`Thank you for subscribing, ${email}!`);
+                } else {
+                    alert("You need to enter a valid email address.");
+                }
+            }
+        </script>
+    
     </main>
-
+ 
     <footer>
         <p>Copyright &copy; by Christofer, Saga, Sami</p>
     </footer>

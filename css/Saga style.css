@@ -1,1 +1,31 @@
+<style>
+        /* Gör SVG-ikoner mörkgröna och texten större */
+        .highlighted-text {
+            font-size: 1.2em; /* Gör texten större */
+            color: #006400; /* Mörkgrön färg */
+        }
+    
+        /* Nyhetsbrevs-knapp */
+        .newsletter-button {
+            background-color: #006400; /* Mörkgrön färg för att synas bättre*/
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 4rem; /* Fyra rader/marginal */
+        }
+    
+        .newsletter-button:hover {
+            background-color: #004d00; /* Ännu mörkare grön vid hover */
+        }
+    
+        /* Sektionen för nyhetsbrev */
+        .newsletter-section {
+            text-align: center;
+            margin-top: 2rem; /* Extra utrymme ovanför nyhetsbrevssektionen */
+        }
+    </style>
 
+    /*---- min/Saga CSS för index/home
