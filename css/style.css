@@ -280,7 +280,7 @@ footer {
 /* MEDIA TILL KNAPPEN I LOGIN */
 
 @media (max-width: 600px) {
-    .order-button {
+    .login-container .order-button {
         display: flex;
         flex: 1;
         min-width: 200px;
