@@ -290,7 +290,7 @@ footer {
     }
 }
 
-.button-account-creation {   
+.button-account-creation, .create-button {   
     cursor: pointer;
     background-color: green;
     color: white;
@@ -306,9 +306,10 @@ footer {
 /* Christofer skriver för VG */
 
 .creation-main > section > h1 {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-shadow: 3px 3px 10px black;
 }
+
 
 .creation-main {
     display: flex; 
@@ -318,7 +319,6 @@ footer {
     
     justify-content: center;
     align-self: center;   
-    
 }
 
 .creation-main > section {
@@ -333,7 +333,7 @@ footer {
     justify-content: center;
     text-align: center;
     flex-direction: column;
- 
+     
     border: 2px solid transparent;
     box-shadow: 0 0 20px 5px rgba(255, 100, 0, 0.8), 
                 0 0 40px 10px rgba(255, 165, 0, 0.6), 
@@ -342,13 +342,49 @@ footer {
     animation: fireEffect 1.5s infinite alternate;
 }
 
-.creation-main > section > section > section{
+.creation-main > section > section{
     display: flex;
-    justify-content: center;
-    height: 7%;
+    
+    justify-content: center;  
+    text-align: center;  
+    
+    
+    /* background-color: black; */
 }
 
-.creation-main > section > section > section > input{    
+
+.creation-main > section > section:nth-child(2){   
+    height: 2.6rem;
+    /* background-color: black; */
+}
+.creation-main > section > section:nth-child(2) > input:nth-child(1){   
+    margin-right: 0.5rem;
+    /* background-color: black; */
+}
+
+.creation-main > section > section:nth-child(3) > input:nth-child(1){   
+    margin-right: 0.5rem;
+    /* background-color: black; */
+}
+
+.creation-main > section > section:nth-child(3){    
+    
+    width: 100%;
+    height: 2.6rem;
+     /* background-color: black; */
+     margin-bottom: 2rem;
+}
+
+.creation-main > section > section:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    
+    height: 2.6rem;
+    margin-bottom: 2rem;
+     /* background-color: black; */
+}
+
+.creation-main > section > section > input{    
     width: 100%;
     margin-bottom: 0.5rem;
     /* background-color: aqua; */
@@ -356,42 +392,8 @@ footer {
     
 }
 
-.creation-main > section > section > section:nth-child(1) > input:nth-child(1){    
-    width: 100%;
-    margin-right: 0.5rem; 
-}
-.creation-main > section > section > section:nth-child(2) > input:nth-child(1){    
-    width: 100%;
-    margin-right: 0.5rem; 
-}
 
-.creation-main > section > section > section:nth-child(1){    
-    display: flex;
-    flex: 1;
-    width: 100%;
 
-    height: 2.6rem;
-}
-
-.creation-main > section > section > section:nth-child(2){    
-    display: flex;
-    flex: 1;
-    width: 100%;
-
-    height: 2.6rem;
-}
-
-.creation-main > section > section > section:nth-child(3){
-    display: flex;
-    flex-direction: column;
-
-    height: 8rem;
-}
-
-.creation-main > section > section > section:nth-child(3) > input{
-    display: flex;
-    flex: 1;
-}
 
 @keyframes fireEffect {
 
@@ -413,38 +415,40 @@ footer {
     }
 }
 
-@media (max-width: 800px) {
-    .creation-main > section > section > button{
-    justify-content: center;
-    text-align: center;
+@media (min-width: 1000px) {
+    .creation-main {
+        width: 56rem;
     }
+}
 
-    .creation-main > section > section > section:nth-child(1){    
+@media (max-width: 800px) { 
+
+    .creation-main > section > section:nth-child(2){    
         display: flex;
         flex-direction: column;
-        height: 5.2rem;
+        height: 4.5rem;
         width: 100%;
     }
 
-    .creation-main > section > section > section:nth-child(1) > input{    
+    .creation-main > section > section:nth-child(2) > input{    
         flex-direction: column;
 
         width: 100%;
-        height: 7rem;         
+        height: 1.8rem;         
     }
 
-    .creation-main > section > section > section:nth-child(2){    
+    .creation-main > section >  section:nth-child(3){    
         display: flex;
         flex-direction: column;
-        height: 5.2rem;
+        height: 4.5rem;
         width: 100%;
     }
 
-    .creation-main > section > section > section:nth-child(2) > input{    
+    .creation-main > section > section:nth-child(3) > input{    
         flex-direction: column;
 
         width: 100%;
-        height: 7rem;         
+        height: 1.8rem;         
     }
 
 }
