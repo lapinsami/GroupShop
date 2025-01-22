@@ -277,6 +277,17 @@ footer {
     margin: 5px;
 }
 
+@media (max-width: 600px) {
+    .order-button {
+        display: flex;
+        flex: 1;
+        min-width: 200px;
+        min-height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 /* Yta där jag/christofer skriver för profile 
 ------------------------------------*/
 
