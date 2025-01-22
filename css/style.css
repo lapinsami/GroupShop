@@ -280,7 +280,7 @@ footer {
 /* MEDIA TILL KNAPPEN I LOGIN */
 
 @media (max-width: 600px) {
-    .login-container .order-button {
+    .login-container .order-button, .button-account-creation {
         display: flex;
         flex: 1;
         min-width: 200px;
@@ -289,6 +289,167 @@ footer {
         align-items: center;
     }
 }
+
+.button-account-creation {   
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+
+/* Christofer skriver för VG */
+
+.creation-main > section > h1 {
+    margin-bottom: 5rem;
+    text-shadow: 3px 3px 10px black;
+}
+
+.creation-main {
+    display: flex; 
+    flex: 1; 
+
+    width: 60%;
+    
+    justify-content: center;
+    align-self: center;   
+    
+}
+
+.creation-main > section {
+    background-color: lightgray;
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+
+    width: 50%;
+    height: 60%;
+
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+ 
+    border: 2px solid transparent;
+    box-shadow: 0 0 20px 5px rgba(255, 100, 0, 0.8), 
+                0 0 40px 10px rgba(255, 165, 0, 0.6), 
+                0 0 60px 20px rgba(255, 255, 0, 0.4);
+    border-radius: 20%;
+    animation: fireEffect 1.5s infinite alternate;
+}
+
+.creation-main > section > section > section{
+    display: flex;
+    justify-content: center;
+    height: 7%;
+}
+
+.creation-main > section > section > section > input{    
+    width: 100%;
+    margin-bottom: 0.5rem;
+    /* background-color: aqua; */
+    padding: 4px;   
+    
+}
+
+.creation-main > section > section > section:nth-child(1) > input:nth-child(1){    
+    width: 100%;
+    margin-right: 0.5rem; 
+}
+.creation-main > section > section > section:nth-child(2) > input:nth-child(1){    
+    width: 100%;
+    margin-right: 0.5rem; 
+}
+
+.creation-main > section > section > section:nth-child(1){    
+    display: flex;
+    flex: 1;
+    width: 100%;
+
+    height: 2.6rem;
+}
+
+.creation-main > section > section > section:nth-child(2){    
+    display: flex;
+    flex: 1;
+    width: 100%;
+
+    height: 2.6rem;
+}
+
+.creation-main > section > section > section:nth-child(3){
+    display: flex;
+    flex-direction: column;
+
+    height: 8rem;
+}
+
+.creation-main > section > section > section:nth-child(3) > input{
+    display: flex;
+    flex: 1;
+}
+
+@keyframes fireEffect {
+
+    
+    0% {
+        box-shadow: 0 0 20px 5px rgba(255, 100, 0, 0.8), 
+                    0 0 40px 10px rgba(255, 165, 0, 0.6), 
+                    0 0 60px 20px rgba(255, 255, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 25px 10px rgba(255, 50, 0, 0.9), 
+                    0 0 50px 15px rgba(255, 140, 0, 0.7), 
+                    0 0 70px 30px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px 5px rgba(255, 120, 0, 0.8), 
+                    0 0 40px 10px rgba(255, 180, 0, 0.6), 
+                    0 0 60px 20px rgba(255, 230, 0, 0.4);
+    }
+}
+
+@media (max-width: 800px) {
+    .creation-main > section > section > button{
+    justify-content: center;
+    text-align: center;
+    }
+
+    .creation-main > section > section > section:nth-child(1){    
+        display: flex;
+        flex-direction: column;
+        height: 5.2rem;
+        width: 100%;
+    }
+
+    .creation-main > section > section > section:nth-child(1) > input{    
+        flex-direction: column;
+
+        width: 100%;
+        height: 7rem;         
+    }
+
+    .creation-main > section > section > section:nth-child(2){    
+        display: flex;
+        flex-direction: column;
+        height: 5.2rem;
+        width: 100%;
+    }
+
+    .creation-main > section > section > section:nth-child(2) > input{    
+        flex-direction: column;
+
+        width: 100%;
+        height: 7rem;         
+    }
+
+}
+
+
 
 /* Yta där jag/christofer skriver för profile 
 ------------------------------------*/
