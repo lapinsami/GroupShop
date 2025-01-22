@@ -277,6 +277,8 @@ footer {
     margin: 5px;
 }
 
+/* MEDIA TILL KNAPPEN I LOGIN */
+
 @media (max-width: 600px) {
     .order-button {
         display: flex;
